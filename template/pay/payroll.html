@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>payroll</h1>
+</head>
+<body>
+{% if payrolls %}
+<table>
+	<thead>
+
+	<th>salary</th>
+	<th>overtime</th>
+	<th>tax</th>
+	<th>gross_pay</th>
+	<th>net_pay</th>
+	<th>deduction</th>
+</thead>
+{% for x in payrolls %}
+<tr>
+	<td>{{x.salary}}</td>
+	<td>{{x.overtime}}</td>
+	<td>{{x.tax}}</td>
+	<td>{{x.gross_pay}}</td>
+	<td>{{x.net_pay}}</td>
+	<td>{{x.deduction}}</td>
+</tr>
+{% endfor %}
+{% else %}
+{% endif %}
+</table>
+
+<form method="post">
+
+	{% csrf_token %}
+	{{form.as_p}}
+<input type="submit" value="submit">	
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+	{
+		"model": "pay.payroll",
+		"pk": 1,
+		"fields":{
+			"salary": 20000,
+			"overtime_pay":1232.85,
+			"tax":0.05,
+			"gross_pay":19000,
+			"net_pay":20000,
+			"deduction":2301.25,
+			"employee":1
+		}
+	},
+	{
+		"model": "pay.payroll",
+		"pk":1,
+		"fields":{
+			"salary":30000,
+			"overtime_pay":1848.75,
+			"tax":0.05,
+			"gross_pay":285000,
+			"net_pay":30000,
+			"deduction":2301.25,
+			"employee":1
+		}
+	}
+]
